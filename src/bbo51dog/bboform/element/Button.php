@@ -5,7 +5,7 @@ namespace bbo51dog\bboform\element;
 class Button implements SimpleFormElement, ModalFormElement {
 
     /** @var ButtonImage|null */
-    private $image = null;
+    private $image;
 
     /** @var string */
     private $text;
@@ -14,9 +14,11 @@ class Button implements SimpleFormElement, ModalFormElement {
      * Button constructor.
      *
      * @param string $text
+     * @param ButtonImage|null $image
      */
-    public function __construct(string $text) {
+    public function __construct(string $text, ?ButtonImage $image = null) {
         $this->text = $text;
+        $this->image = $image;
     }
 
     /**
@@ -40,23 +42,9 @@ class Button implements SimpleFormElement, ModalFormElement {
     }
 
     /**
-     * @param ButtonImage|null $image
-     */
-    public function setImage(?ButtonImage $image): void {
-        $this->image = $image;
-    }
-
-    /**
      * @return string
      */
     public function getText(): string {
         return $this->text;
-    }
-
-    /**
-     * @param string $text
-     */
-    public function setText(string $text): void {
-        $this->text = $text;
     }
 }
