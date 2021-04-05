@@ -11,7 +11,7 @@ abstract class FormBase implements Form {
     public const TYPE_CUSTOM = "custom_form";
 
     /** @var string */
-    private $title;
+    private $title = "";
 
     abstract public function getType(): string;
 
