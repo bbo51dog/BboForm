@@ -3,7 +3,8 @@
     "description": "Form API for PMMP",
     "license": "MIT",
     "require": {
-        "php": "^7.3"
+        "php": "^7.3",
+        "ext-json": "*"
     },
     "require-dev": {
         "pocketmine/pocketmine-mp": "^3.18.0"
