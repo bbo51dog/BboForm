@@ -2,7 +2,7 @@
 
 namespace bbo51dog\bboform\element;
 
-class Button implements SimpleFormElement {
+class Button implements SimpleFormElement, ModalFormElement {
 
     /** @var ButtonImage|null */
     private $image = null;
