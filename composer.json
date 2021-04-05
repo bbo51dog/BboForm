@@ -1,0 +1,24 @@
+{
+    "name": "bbo51dog/bboform",
+    "description": "Form API for PMMP",
+    "license": "MIT",
+    "require": {
+        "php": "^7.3"
+    },
+    "require-dev": {
+        "pocketmine/pocketmine-mp": "^3.18.0"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/pmmp/PocketMine-MP.git"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "": [
+                "src/"
+            ]
+        }
+    }
+}
