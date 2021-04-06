@@ -6,7 +6,7 @@ use pocketmine\form\Form;
 
 abstract class FormBase implements Form {
 
-    public const TYPE_SIMPLE = "simple";
+    public const TYPE_SIMPLE = "form";
     public const TYPE_MODAL = "modal";
     public const TYPE_CUSTOM = "custom_form";
 
