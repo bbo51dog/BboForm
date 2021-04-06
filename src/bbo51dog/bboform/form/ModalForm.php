@@ -30,8 +30,16 @@ class ModalForm extends FormBase {
     /**
      * @inheritDoc
      */
-    public function handleResponse(Player $player, $data): void {
-        // TODO: Implement handleResponse() method.
+    final public function handleResponse(Player $player, $data): void {
+        if (!is_bool($data)) {
+            return;
+        }
+        if ($data) {
+            $button = $this->button1;
+        } else {
+            $button = $this->button2;
+        }
+        $button->handleSubmit($player);
     }
 
     public function getType(): string {

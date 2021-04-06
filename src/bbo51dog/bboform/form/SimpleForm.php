@@ -2,7 +2,7 @@
 
 namespace bbo51dog\bboform\form;
 
-use bbo51dog\bboform\element\SimpleFormElement;
+use bbo51dog\bboform\element\Button;
 use pocketmine\Player;
 
 class SimpleForm extends FormBase {
@@ -10,10 +10,10 @@ class SimpleForm extends FormBase {
     /** @var string */
     private $content = "";
 
-    /** @var SimpleFormElement[] */
+    /** @var Button[] */
     private $buttons = [];
 
-    public function addElement(SimpleFormElement $element): self {
+    public function addButton(Button $element): self {
         $this->buttons[] = $element;
         return $this;
     }
@@ -22,8 +22,11 @@ class SimpleForm extends FormBase {
         return self::TYPE_SIMPLE;
     }
 
-    public function handleResponse(Player $player, $data): void {
-        // TODO: Implement handleResponse() method.
+    final public function handleResponse(Player $player, $data): void {
+        if ($data === null) {
+            return;
+        }
+        $this->buttons[$data]->handleSubmit($player);
     }
 
     public function serializeContent() {

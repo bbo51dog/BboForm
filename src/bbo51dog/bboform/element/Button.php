@@ -2,6 +2,8 @@
 
 namespace bbo51dog\bboform\element;
 
+use pocketmine\Player;
+
 class Button implements SimpleFormElement, ModalFormElement {
 
     /** @var ButtonImage|null */
@@ -19,6 +21,10 @@ class Button implements SimpleFormElement, ModalFormElement {
     public function __construct(string $text, ?ButtonImage $image = null) {
         $this->text = $text;
         $this->image = $image;
+    }
+
+    public function handleSubmit(Player $player): void {
+
     }
 
     /**
