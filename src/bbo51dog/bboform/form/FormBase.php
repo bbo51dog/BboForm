@@ -40,8 +40,10 @@ abstract class FormBase implements Form {
 
     /**
      * @param string $title
+     * @return FormBase
      */
-    public function setTitle(string $title): void {
+    public function setTitle(string $title): self {
         $this->title = $title;
+        return $this;
     }
 }

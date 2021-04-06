@@ -47,8 +47,10 @@ class SimpleForm extends FormBase {
 
     /**
      * @param string $content
+     * @return SimpleForm
      */
-    public function setText(string $content): void {
+    public function setText(string $content): self {
         $this->content = $content;
+        return $this;
     }
 }

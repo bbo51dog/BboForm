@@ -61,9 +61,11 @@ class ModalForm extends FormBase {
 
     /**
      * @param string $content
+     * @return ModalForm
      */
-    public function setText(string $content): void {
+    public function setText(string $content): self {
         $this->content = $content;
+        return $this;
     }
 
     /**
@@ -74,23 +76,9 @@ class ModalForm extends FormBase {
     }
 
     /**
-     * @param Button $button1
-     */
-    public function setButton1(Button $button1): void {
-        $this->button1 = $button1;
-    }
-
-    /**
      * @return Button
      */
     public function getButton2(): Button {
         return $this->button2;
-    }
-
-    /**
-     * @param Button $button2
-     */
-    public function setButton2(Button $button2): void {
-        $this->button2 = $button2;
     }
 }
