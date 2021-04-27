@@ -20,6 +20,6 @@ class ClosureCustomForm extends CustomForm {
     }
 
     public function handleSubmit(Player $player): void {
-        ($this->closure)($player);
+        ($this->closure)($player, $this);
     }
 }

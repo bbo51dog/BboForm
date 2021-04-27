@@ -23,6 +23,6 @@ class ClosureButton extends Button {
     }
 
     public function handleSubmit(Player $player): void {
-        ($this->closure)($player);
+        ($this->closure)($player, $this);
     }
 }
