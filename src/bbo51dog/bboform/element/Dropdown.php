@@ -2,7 +2,7 @@
 
 namespace bbo51dog\bboform\element;
 
-class Dropdown implements CustomFormElement {
+class Dropdown extends CustomFormElement {
 
     /** @var string */
     private $text = "";
@@ -44,5 +44,19 @@ class Dropdown implements CustomFormElement {
      */
     public function getOptions(): array {
         return $this->options;
+    }
+
+    /**
+     * @return int
+     */
+    public function getValue(): int {
+        return parent::getValue();
+    }
+
+    /**
+     * @return string
+     */
+    public function getSelectedOption(): string {
+        return $this->options[$this->getValue()];
     }
 }

@@ -4,7 +4,7 @@ namespace bbo51dog\bboform\element;
 
 use InvalidArgumentException;
 
-class Slider implements CustomFormElement {
+class Slider extends CustomFormElement {
 
     /** @var string */
     private $text;
@@ -81,5 +81,12 @@ class Slider implements CustomFormElement {
      */
     public function getDefault(): ?int {
         return $this->default;
+    }
+
+    /**
+     * @return float
+     */
+    public function getValue(): float {
+        return parent::getValue();
     }
 }

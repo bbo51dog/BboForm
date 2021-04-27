@@ -2,7 +2,7 @@
 
 namespace bbo51dog\bboform\element;
 
-class StepSlider implements CustomFormElement {
+class StepSlider extends CustomFormElement {
 
     /** @var string */
     private $text;
@@ -60,5 +60,19 @@ class StepSlider implements CustomFormElement {
      */
     public function getDefault(): ?int {
         return $this->default;
+    }
+
+    /**
+     * @return int
+     */
+    public function getValue(): int {
+        return parent::getValue();
+    }
+
+    /**
+     * @return string
+     */
+    public function getStepName(): string {
+        return $this->steps[$this->getValue()];
     }
 }

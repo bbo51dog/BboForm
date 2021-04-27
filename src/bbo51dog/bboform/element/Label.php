@@ -2,7 +2,7 @@
 
 namespace bbo51dog\bboform\element;
 
-class Label implements CustomFormElement {
+class Label extends CustomFormElement {
 
     /** @var string */
     private $text;
@@ -31,5 +31,12 @@ class Label implements CustomFormElement {
      */
     public function getText(): string {
         return $this->text;
+    }
+
+    /**
+     * @return null
+     */
+    public function getValue() {
+        return null;
     }
 }

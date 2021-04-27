@@ -13,8 +13,15 @@ class CustomForm extends FormBase {
     /**
      * @inheritDoc
      */
-    public function handleResponse(Player $player, $data): void {
-        // TODO: Implement handleResponse() method.
+    final public function handleResponse(Player $player, $data): void {
+        if ($data === null) {
+            return;
+        }
+        foreach ($data as $k => $value) {
+            $element = $this->elements[$k];
+            $element->setValue($value);
+            $element->handleSubmit($player);
+        }
     }
 
     public function getType(): string {
@@ -35,5 +42,12 @@ class CustomForm extends FormBase {
     public function addElement(CustomFormElement $element): self {
         $this->elements[] = $element;
         return $this;
+    }
+
+    /**
+     * @return CustomFormElement[]
+     */
+    public function getElements(): array {
+        return $this->elements;
     }
 }

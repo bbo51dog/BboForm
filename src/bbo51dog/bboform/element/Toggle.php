@@ -2,7 +2,7 @@
 
 namespace bbo51dog\bboform\element;
 
-class Toggle implements CustomFormElement {
+class Toggle extends CustomFormElement {
 
     /** @var string */
     private $text;
@@ -42,7 +42,14 @@ class Toggle implements CustomFormElement {
     /**
      * @return bool
      */
-    public function isDefault(): bool {
+    public function getDefault(): bool {
         return $this->default;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getValue(): bool {
+        return parent::getValue();
     }
 }

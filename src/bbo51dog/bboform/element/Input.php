@@ -2,7 +2,7 @@
 
 namespace bbo51dog\bboform\element;
 
-class Input implements CustomFormElement {
+class Input extends CustomFormElement {
 
     /** @var string */
     private $text;
@@ -57,5 +57,12 @@ class Input implements CustomFormElement {
      */
     public function getDefault(): string {
         return $this->default;
+    }
+
+    /**
+     * @return string
+     */
+    public function getValue(): string {
+        return parent::getValue();
     }
 }
