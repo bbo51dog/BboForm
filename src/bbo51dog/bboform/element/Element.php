@@ -13,5 +13,5 @@ interface Element extends JsonSerializable {
      * @param Player $player
      * @return mixed
      */
-    public function handleSubmit(Player $player);
+    public function handleSubmit(Player $player): void;
 }

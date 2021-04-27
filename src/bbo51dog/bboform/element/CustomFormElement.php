@@ -31,7 +31,7 @@ abstract class CustomFormElement implements Element {
         return $this->value;
     }
 
-    public function handleSubmit(Player $player) {
+    public function handleSubmit(Player $player): void {
 
     }
 }

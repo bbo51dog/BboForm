@@ -52,7 +52,7 @@ abstract class FormBase implements Form {
      * Called when form is submitted
      * @param Player $player
      */
-    public function handleSubmit(Player $player) {
+    public function handleSubmit(Player $player): void {
 
     }
 }
