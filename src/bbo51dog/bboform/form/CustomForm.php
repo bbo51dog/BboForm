@@ -22,6 +22,7 @@ class CustomForm extends FormBase {
             $element->setValue($value);
             $element->handleSubmit($player);
         }
+        $this->handleSubmit($player);
     }
 
     public function getType(): string {

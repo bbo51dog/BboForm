@@ -40,6 +40,7 @@ class ModalForm extends FormBase {
             $button = $this->button2;
         }
         $button->handleSubmit($player);
+        $this->handleSubmit($player);
     }
 
     public function getType(): string {

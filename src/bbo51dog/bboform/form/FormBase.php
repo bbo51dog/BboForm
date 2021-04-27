@@ -3,6 +3,7 @@
 namespace bbo51dog\bboform\form;
 
 use pocketmine\form\Form;
+use pocketmine\Player;
 
 abstract class FormBase implements Form {
 
@@ -45,5 +46,13 @@ abstract class FormBase implements Form {
     public function setTitle(string $title): self {
         $this->title = $title;
         return $this;
+    }
+
+    /**
+     * Called when form is submitted
+     * @param Player $player
+     */
+    public function handleSubmit(Player $player) {
+
     }
 }

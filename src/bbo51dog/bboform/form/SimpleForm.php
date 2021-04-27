@@ -27,6 +27,7 @@ class SimpleForm extends FormBase {
             return;
         }
         $this->buttons[$data]->handleSubmit($player);
+        $this->handleSubmit($player);
     }
 
     public function serializeContent() {
