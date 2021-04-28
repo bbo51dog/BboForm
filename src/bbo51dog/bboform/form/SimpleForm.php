@@ -2,7 +2,7 @@
 
 namespace bbo51dog\bboform\form;
 
-use bbo51dog\bboform\element\Button;
+use bbo51dog\bboform\element\SimpleFormElement;
 use pocketmine\Player;
 
 class SimpleForm extends FormBase {
@@ -10,11 +10,15 @@ class SimpleForm extends FormBase {
     /** @var string */
     private $content = "";
 
-    /** @var Button[] */
-    private $buttons = [];
+    /** @var SimpleFormElement[] */
+    private $elements = [];
 
-    public function addButton(Button $element): self {
-        $this->buttons[] = $element;
+    /**
+     * @param SimpleFormElement $element
+     * @return $this
+     */
+    public function addElement(SimpleFormElement $element): self {
+        $this->elements[] = $element;
         return $this;
     }
 
@@ -26,7 +30,7 @@ class SimpleForm extends FormBase {
         if ($data === null) {
             return;
         }
-        $this->buttons[$data]->handleSubmit($player);
+        $this->elements[$data]->handleSubmit($player);
         $this->handleSubmit($player);
     }
 
@@ -36,7 +40,7 @@ class SimpleForm extends FormBase {
 
     public function jsonSerialize(): array {
         $data = parent::jsonSerialize();
-        foreach ($this->buttons as $element) {
+        foreach ($this->elements as $element) {
             $data["buttons"][] = $element->jsonSerialize();
         }
         return $data;
