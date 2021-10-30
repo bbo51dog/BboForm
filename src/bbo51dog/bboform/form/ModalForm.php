@@ -31,6 +31,7 @@ class ModalForm extends FormBase {
      * @inheritDoc
      */
     final public function handleResponse(Player $player, $data): void {
+        parent::handleResponse($player, $data);
         if (!is_bool($data)) {
             return;
         }

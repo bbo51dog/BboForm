@@ -14,6 +14,7 @@ class CustomForm extends FormBase {
      * @inheritDoc
      */
     final public function handleResponse(Player $player, $data): void {
+        parent::handleResponse($player, $data);
         if ($data === null) {
             return;
         }

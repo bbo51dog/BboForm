@@ -49,10 +49,27 @@ abstract class FormBase implements Form {
     }
 
     /**
+     * @inheritDoc
+     */
+    public function handleResponse(Player $player, $data): void {
+        if ($data === null) {
+            $this->handleClosed($player);
+        }
+    }
+
+    /**
      * Called when form is submitted
      * @param Player $player
      */
     public function handleSubmit(Player $player): void {
+
+    }
+
+    /**
+     * Called when form is closed without submit
+     * @param Player $player
+     */
+    public function handleClosed(Player $player): void {
 
     }
 }
