@@ -8,7 +8,7 @@ use pocketmine\Player;
 class CustomForm extends FormBase {
 
     /** @var CustomFormElement[] */
-    private $elements;
+    private $elements = [];
 
     /**
      * @inheritDoc
