@@ -47,10 +47,10 @@ class CustomForm extends FormBase {
     }
 
     /**
-     * @param CustomFormElement[] $elements
+     * @param CustomFormElement ...$elements
      * @return $this
      */
-    public function addElements(array $elements): self {
+    public function addElements(CustomFormElement ...$elements): self {
         $this->elements = array_merge($this->elements, $elements);
         return $this;
     }

@@ -23,10 +23,10 @@ class SimpleForm extends FormBase {
     }
 
     /**
-     * @param SimpleFormElement[] $elements
+     * @param SimpleFormElement ...$elements
      * @return $this
      */
-    public function addElements(array $elements): self {
+    public function addElements(SimpleFormElement ...$elements): self {
         $this->elements = array_merge($this->elements, $elements);
         return $this;
     }
