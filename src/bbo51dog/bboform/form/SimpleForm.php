@@ -22,6 +22,15 @@ class SimpleForm extends FormBase {
         return $this;
     }
 
+    /**
+     * @param SimpleFormElement[] $elements
+     * @return $this
+     */
+    public function addElements(array $elements): self {
+        $this->elements = array_merge($this->elements, $elements);
+        return $this;
+    }
+
     public function getType(): string {
         return self::TYPE_SIMPLE;
     }
