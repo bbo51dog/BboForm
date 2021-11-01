@@ -50,6 +50,7 @@ class SimpleForm extends FormBase {
 
     public function jsonSerialize(): array {
         $data = parent::jsonSerialize();
+        $data["buttons"] = [];
         foreach ($this->elements as $element) {
             $data["buttons"][] = $element->jsonSerialize();
         }
