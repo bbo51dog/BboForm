@@ -1,5 +1,5 @@
 name: BboForm
 author: bbo51dog
-api: 3.18.0
+api: 4.0.0
 main: bbo51dog\bboform\BboForm
-version: 1.2.1
+version: 2.0.0
