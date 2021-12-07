@@ -3,7 +3,7 @@
 namespace bbo51dog\bboform\form;
 
 use Closure;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 class ClosureCustomForm extends CustomForm {
 

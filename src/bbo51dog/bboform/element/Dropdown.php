@@ -5,10 +5,10 @@ namespace bbo51dog\bboform\element;
 class Dropdown extends CustomFormElement {
 
     /** @var string */
-    private $text = "";
+    private $text;
 
     /** @var string[] */
-    private $options = [];
+    private $options;
 
     /**
      * Dropdown constructor.

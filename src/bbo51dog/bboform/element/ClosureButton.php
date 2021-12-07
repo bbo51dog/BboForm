@@ -3,7 +3,7 @@
 namespace bbo51dog\bboform\element;
 
 use Closure;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 class ClosureButton extends Button {
 

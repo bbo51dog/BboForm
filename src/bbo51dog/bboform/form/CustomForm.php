@@ -3,7 +3,7 @@
 namespace bbo51dog\bboform\form;
 
 use bbo51dog\bboform\element\CustomFormElement;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 class CustomForm extends FormBase {
 

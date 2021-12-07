@@ -3,7 +3,7 @@
 namespace bbo51dog\bboform\element;
 
 use JsonSerializable;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 interface Element extends JsonSerializable {
 

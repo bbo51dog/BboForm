@@ -2,7 +2,7 @@
 
 namespace bbo51dog\bboform\element;
 
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 class Button implements SimpleFormElement, ModalFormElement {
 

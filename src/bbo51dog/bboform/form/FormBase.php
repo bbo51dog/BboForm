@@ -3,7 +3,7 @@
 namespace bbo51dog\bboform\form;
 
 use pocketmine\form\Form;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 abstract class FormBase implements Form {
 
